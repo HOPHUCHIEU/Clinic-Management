@@ -62,7 +62,7 @@ function NewChatBot() {
         steps={[
           {
             id: "1",
-            message: `Chào bạn, tôi là trợ lý ảo ${theme.botName}❤️❤️. Tên bạn là gì ạ?`,
+            message: `Chào bạn, tôi là trợ lý ảo ${theme.botName}❤️❤️. tên chóa gìTên bạn là gì ạ?`,
             trigger: "2",
           },
           { id: "2", user: true, trigger: "3" },
