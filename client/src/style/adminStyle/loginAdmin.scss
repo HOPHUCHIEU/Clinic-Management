@@ -1,0 +1,82 @@
+/* Login.scss */
+.login-page {
+  display: flex;
+  height: 100vh;
+  background-color: #f0f4f8;
+
+  .login-form-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+
+    .login-form {
+      width: 400px;
+      text-align: center;
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #34a853;
+
+        span {
+          color: #4285f4;
+        }
+      }
+
+      p {
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+        color: #555;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px 15px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+        outline: none;
+
+        &:focus {
+          border-color: #4285f4;
+        }
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        background-color: #4285f4;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        margin-left: -1px;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #357ae8;
+        }
+      }
+    }
+  }
+
+  .login-illustration {
+    flex: 1;
+    background-color: #1a73e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 60%;
+      max-width: 500px;
+    }
+  }
+}

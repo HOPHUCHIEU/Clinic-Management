@@ -1,0 +1,194 @@
+.datepiker-addbtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 30px;
+  gap: 20px;
+
+  .date-picker-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    background-color: #f1f4f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    label {
+      font-weight: 600;
+      color: #343a40;
+      font-size: 16px;
+    }
+
+    .form-control {
+      width: 200px;
+      padding: 10px;
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+      font-size: 15px;
+      color: #495057;
+      transition: border-color 0.3s;
+
+      &:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+      }
+    }
+
+    .btn-primary {
+      padding: 10px 20px;
+      font-weight: 600;
+      color: #007bff;
+      background-color: white;
+      border: 2px solid #007bff;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #007bff;
+        color: white;
+      }
+    }
+  }
+
+  .add-schedual {
+    .btn-primary {
+      padding: 12px 20px;
+      font-weight: 600;
+      color: #28a745;
+      background-color: white;
+      border: 2px solid #28a745;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #28a745;
+        color: white;
+      }
+
+      .ic {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.table-container {
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+  .table {
+    th {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      padding: 15px;
+    }
+
+    td {
+      text-align: center;
+      padding: 10px;
+      vertical-align: middle;
+      color: #495057;
+    }
+
+    .btn-warning,
+    .btn-danger {
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-warning {
+      color: #fff;
+      background-color: #ffc107;
+
+      &:hover {
+        background-color: #e0a800;
+      }
+    }
+
+    .btn-danger {
+      color: #fff;
+      background-color: #dc3545;
+
+      &:hover {
+        background-color: #c82333;
+      }
+    }
+  }
+}
+
+.pagination_schedule {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+
+  li {
+    a {
+      display: inline-block;
+      padding: 8px 12px;
+      color: #007bff;
+      text-decoration: none;
+      border: 1px solid #dee2e6;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        background-color: #e9ecef;
+        color: #0056b3;
+      }
+    }
+
+    &.active a {
+      background-color: #007bff;
+      color: #fff;
+      border-color: #007bff;
+      cursor: default;
+
+      &:hover {
+        background-color: #007bff;
+        color: #fff;
+      }
+    }
+
+    &.disabled a {
+      color: #6c757d;
+      pointer-events: none;
+      cursor: not-allowed;
+
+      &:hover {
+        background-color: transparent;
+        color: #6c757d;
+      }
+    }
+  }
+}
+
+.create-schedules {
+  padding: 12px 25px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 30px;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}

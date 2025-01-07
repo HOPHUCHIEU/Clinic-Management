@@ -1,0 +1,86 @@
+.navbar-custom {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px;
+  height: 60px;
+  padding: 0px;
+  .container {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 50px;
+    overflow: visible;
+    .nav-links {
+      margin-left: 703px;
+      display: flex;
+      gap: 33px;
+      font-weight: 700;
+    }
+    .logoMain {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #34a853;
+
+      span {
+        color: #4285f4;
+      }
+    }
+
+    .navbar-buttons {
+      margin-left: 10px;
+
+      .btn_login {
+        background-color: white;
+        color: blue;
+        margin-left: 10px; /* Adds spacing between Đăng ký and Đăng nhập buttons */
+      }
+      .btn_signup {
+        background-color: #08aa82;
+        color: white;
+      }
+
+      .login-dropdown-container {
+        position: relative;
+        display: inline-block;
+
+        .btn_login {
+          background-color: #007bff;
+          color: white;
+          border: none;
+          padding: 8px 12px;
+          font-size: 16px;
+          cursor: pointer;
+          margin-left: 10px; /* Adds spacing here as well */
+        }
+        .btn_signup {
+          background-color: #08aa82;
+          color: white;
+          border: none;
+          padding: 8px 12px;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .navbar-collapse {
+      justify-content: space-between;
+    }
+  }
+}
+.dropdown-menu[data-bs-popper] {
+  left: -39px !important;
+}
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 100% !important;
+  }
+}

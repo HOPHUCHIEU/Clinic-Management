@@ -1,0 +1,195 @@
+// Modal Styles
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+    animation: fadeIn 0.4s ease-out;
+  
+    .modal-header {
+      background-color: #007bff;
+      color: #fff;
+      border-bottom: none;
+      border-radius: 10px 10px 0 0;
+      animation: slideDown 0.4s ease-out;
+  
+      .modal-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+  
+      button.close {
+        color: #fff;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+  
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px 20px;
+  
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        font-size: 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.3s;
+  
+        &:hover {
+          background-color: #0056b3;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  
+  // Patient Information Section
+  .patient-info {
+    background-color: #f9f9f9;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    animation: fadeIn 0.6s ease-out;
+  
+    h3 {
+      font-size: 1.25rem;
+      color: #4a4a4a;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+  
+    p {
+      font-size: 1rem;
+      margin: 8px 0;
+  
+      strong {
+        color: #333;
+      }
+    }
+  }
+  .history-medical{
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  // Accordion Styles
+  .accordion {
+    .accordion-item {
+      border: 1px solid #e6e6e6;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      transition: box-shadow 0.3s;
+  
+      &:hover {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+  
+      .accordion-header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+  
+        button {
+          font-size: 1rem;
+          font-weight: bold;
+          color: #fff;
+          background: none;
+          border: none;
+          text-align: left;
+          width: 100%;
+          padding: 5px 10px;
+  
+          &:focus {
+            box-shadow: none;
+          }
+        }
+      }
+  
+      .accordion-body {
+        background-color: #f8f9fa;
+        padding: 15px;
+        animation: fadeIn 0.4s ease-out;
+  
+        // Doctor Information
+        .doctor-info {
+          margin-bottom: 15px;
+  
+          p {
+            margin: 5px 0;
+  
+            strong {
+              color: #007bff;
+            }
+          }
+        }
+  
+        // Visit Details
+        .visit-details {
+          p {
+            margin: 5px 0;
+  
+            strong {
+              font-weight: bold;
+            }
+          }
+  
+          .prescription-item {
+            margin-left: 20px;
+            margin-bottom: 5px;
+          }
+        }
+  
+        // Total Price
+        .total-price {
+          font-weight: bold;
+          color: #007bff;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  
+  // No Records Message
+  .no-records {
+    text-align: center;
+    font-size: 1rem;
+    color: #999;
+    padding: 20px 0;
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  // Keyframes
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

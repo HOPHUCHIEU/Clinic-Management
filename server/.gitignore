@@ -1,0 +1,66 @@
+# Node modules (back-end và front-end)
+node_modules/
+
+# Environment variables
+# .env
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Production build files (React build output)
+dist/
+build/
+
+# Cache directories (front-end)
+.cache/
+.vite/
+
+# VS Code, JetBrains và các trình soạn thảo khác
+.vscode/
+.idea/
+
+# MacOS
+.DS_Store
+
+# Linux swap file
+*.swp
+
+# Thư mục tạm thời hoặc tải xuống
+tmp/
+temp/
+*.tmp
+
+# Coverage directory cho testing
+coverage/
+
+# Thư viện dành riêng cho TypeScript (nếu bạn sử dụng)
+*.tsbuildinfo
+
+# ESLint cache
+.eslintcache
+
+# Báo cáo bảo mật npm
+.npm/
+
+# IDE workspace (VSCode, WebStorm)
+*.code-workspace
+
+# Thư mục output cho các quá trình build hoặc deploy
+.out/
+.next/
+
+# Lock file cho package manager
+yarn.lock
+pnpm-lock.yaml
+package-lock.json
+
+# Thư mục cài đặt của yarn berry (nếu có)
+.yarn/
+.pnp.*
+
+# Tuyệt đối tránh đẩy những file này khi sử dụng các cơ sở dữ liệu liên quan đến MongoDB
+dump/

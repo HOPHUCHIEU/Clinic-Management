@@ -1,0 +1,204 @@
+.doctorlist-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 100px 100px;
+  background-color: #f9f9f9;
+  min-height: 600px;
+  .search-box-container {
+    width: 100%; // Đảm bảo ô tìm kiếm chiếm toàn bộ chiều ngang container
+    display: flex;
+    justify-content: center; // Căn giữa nội dung tìm kiếm
+    align-items: center; // Căn giữa icon và input theo chiều dọc
+    margin-bottom: 20px; // Khoảng cách giữa ô tìm kiếm và danh sách bác sĩ
+    position: relative; // Để căn chỉnh icon trong input
+  
+    .search-input {
+      width: 50%; // Chiều rộng của ô tìm kiếm
+      padding: 10px 15px 10px 40px; // Chừa không gian cho icon bên trái
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      font-size: 1rem;
+      outline: none;
+      transition: all 0.3s ease;
+  
+      &:focus {
+        border-color: #6c63ff;
+        box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+      }
+    }
+  
+    .search-icon {
+      position: absolute;
+      left: calc(25% - -60px); // Đặt icon ở bên trái của input
+      top: 15px;
+      font-size: 1.2rem; // Kích thước icon
+      color: rgba(108, 99, 255, 0.8); // Màu tím nhạt
+      pointer-events: none; // Để tránh icon bị click
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: #6c63ff; // Màu icon đậm hơn khi hover
+      }
+    }
+  }
+  
+
+  .doctor-detail {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    height: 380px; // Tăng chiều cao để phù hợp với 2 nút
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    transform: scale(1); // Animation scale mặc định
+    transition: all 0.3s ease-in-out; // Thời gian hiệu ứng khi hover
+    opacity: 0; // Hiện dần khi load
+    animation: fadeIn 0.5s ease forwards; // Animation xuất hiện
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05); // Tăng kích thước nhẹ khi hover
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); // Hiệu ứng đổ bóng rõ hơn
+    }
+
+    .doctor-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      object-position: top;
+
+      &:hover {
+        transform: scale(1.05); // Quay nhẹ khi hover
+      }
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 10px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #007bff; // Đổi màu chữ khi hover
+      }
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 15px; // Thêm khoảng cách giữa text và nút
+    }
+
+    .doctor-buttons {
+      margin-top: 15px;
+
+      .appointment-button,
+      .info-button {
+        display: inline-block;
+        padding: 8px 15px;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        margin: 0 5px; // Khoảng cách giữa các nút
+        background-color: rgba(107, 99, 255, 0.15); // Nền mờ
+        color: #6c63ff; // Màu chữ
+        transition: background-color 0.3s ease, transform 0.2s ease;
+
+        &:hover {
+          background-color: rgba(108, 99, 255, 0.3); // Nền mờ đậm hơn khi hover
+          transform: scale(1.05);
+        }
+      }
+
+      .appointment-button {
+        margin-bottom: 10px; // Thêm khoảng cách giữa nút và nút dưới
+      }
+    }
+  }
+
+  // Animation xuất hiện từ từ
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+.paginate {
+    display: flex;
+    justify-content: center;
+    align-items: center; // Đảm bảo nút được căn giữa theo chiều dọc
+    margin-top: 40px; // Tăng khoảng cách giữa danh sách bác sĩ và phân trang
+    width: 100%; // Đảm bảo chiếm toàn bộ chiều ngang container
+  
+    button {
+      padding: 10px 20px; // Tăng kích thước nút
+      margin: 0 5px;
+      border-radius: 5px;
+      font-size: 1rem; // Tăng kích thước chữ
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      background-color: rgba(0, 0, 0, 0.05); // Nền mờ
+      color: #333;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+  
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1); // Nền mờ đậm hơn khi hover
+        transform: scale(1.05);
+      }
+  
+      &.active {
+        background-color: #007bff; // Màu nền cho trang hiện tại
+        color: #fff; // Màu chữ trắng
+      }
+  
+      &:disabled {
+        background-color: rgba(0, 0, 0, 0.05); // Màu nền cho nút disabled
+        color: #ccc; // Màu chữ cho disabled
+        cursor: not-allowed; // Thay đổi con trỏ chuột
+      }
+    }
+  }
+  
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px; // Chiều cao tối thiểu cho loading spinner
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(0, 0, 0, 0.1); // Màu nền mờ
+  border-top-color: #6c63ff; // Màu tím quay
+  border-radius: 50%;
+  animation: spin 1s linear infinite; // Hiệu ứng quay
+}
+
+// Animation quay
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

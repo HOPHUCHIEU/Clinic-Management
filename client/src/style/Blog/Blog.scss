@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.banner {
+  position: relative;
+  background-image: url("../../assets/img/aaas.jpg"); // Đường dẫn tới ảnh banner
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  h1 {
+    font-size: 3em;
+    z-index: 1;
+  }
+}
+
+.main-content {
+  display: flex;
+  max-width: 1369px;
+  margin: 20px auto;
+  padding: 0 20px;
+  gap: 0 10px;
+  .articles {
+    margin-right: 20px;
+    width: 70%;
+    a {
+      text-decoration: none;
+    }
+
+    .article {
+      background-color: #fff;
+      margin-bottom: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      img {
+        width: 300px;
+        height: 200px;
+        top: 597px;
+        left: 407px;
+        gap: 0px;
+        opacity: 0px;
+      }
+
+      .article-content {
+        p {
+          margin: 0;
+          padding: 0;
+        }
+        .title {
+          padding-left: 30px;
+          border-left: 0.1px solid rgb(204, 196, 196);
+          margin-left: 20px;
+
+          .p1 {
+            font-family: Inter;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24.2px;
+            text-align: left;
+            color: #2779d6;
+            font-weight: 600;
+          }
+          .p2 {
+            font-family: Inter;
+            font-size: 23px;
+            font-weight: 500;
+            text-align: left;
+            color: #000000;
+            padding: 16px;
+          }
+          .p3 {
+            font-family: Inter;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 21.78px;
+            text-align: left;
+            color: #766868;
+            margin-left: 15px;
+          }
+        }
+
+        .p4 {
+          color: #00000080;
+          font-family: Inter;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 18.15px;
+          text-align: left;
+          padding: 40px;
+        }
+      }
+    }
+  }
+
+  .sidebar-blog {
+    height: 100%;
+    flex: 1;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 20px; /* Set the top distance from the viewport */
+    align-self: flex-start; /* Ensure it stays at the top of the container */
+
+    .categories {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+
+      p {
+        font-family: Inter;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 20.57px;
+        text-align: left;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #00ff00;
+        padding-bottom: 5px;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+          margin-bottom: 10px;
+
+          button {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 18.15px;
+            padding: 10px 20px;
+            width: 100%;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background-color: #1974dc;
+              color: #fff;
+              border-color: #1974dc;
+            }
+
+            &.active {
+              background-color: #1974dc;
+              color: #fff;
+              border-color: #1974dc;
+            }
+          }
+        }
+      }
+    }
+
+    .most-viewed {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+      span {
+        display: block;
+        font-family: Inter;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 20.57px;
+        text-align: left;
+        margin-bottom: 10px;
+        padding-bottom: 5px; /* Optional, for some space at the bottom */
+        border-bottom: 2px solid #00ff00; /* Green underline */
+      }
+
+      p {
+        font-family: Inter;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 20.57px;
+        text-align: left;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+      }
+
+      .most-blog {
+        display: flex;
+
+        .most-viewed-img {
+          margin-right: 20px;
+
+          img {
+            width: 100px;
+            height: auto;
+            object-fit: cover;
+          }
+        }
+
+        .most-viewed-info {
+          .title {
+            font-family: Inter;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 18px;
+          }
+
+          .view {
+            font-family: Inter;
+            font-size: 12px;
+            font-weight: 400;
+            color: #888;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 20px;
+  p {
+    margin-bottom: 15px;
+  }
+
+  strong {
+    color: #333;
+  }
+}
+
+.modal-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  margin-left: 10px;
+}

@@ -1,0 +1,29 @@
+.sidebar {
+  height: 300px;
+  width: 15%;
+  margin: 16px 16px 0 0px;
+  padding: 1.5rem;
+  background-color: #f7f7f7;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  nav {
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 1rem;
+
+        a {
+          text-decoration: none;
+          color: #4b5563;
+          font-weight: 400;
+
+          &.active {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

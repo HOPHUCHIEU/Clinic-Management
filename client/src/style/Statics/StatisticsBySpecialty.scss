@@ -1,0 +1,59 @@
+.statistics-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  color: #3357ff;
+  .total-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    height: 230px;
+    gap: 0 10px;
+    
+   
+    .total_child{
+      height: 100%; 
+      border: 6px solid rgba(0, 0, 255, 0.466);
+      border-radius: 10px;
+      flex:1;
+        padding-top: 20px;
+      .icons_number{
+        display: flex;
+        justify-content: space-around;
+        .icons{
+          height: 100px;
+          width: 100px;
+          color: rgba(37, 35, 31, 0.589);
+          margin-right: 10px;
+        }
+        span{
+          font-size: 50px;
+          font-weight: bold;
+          color: rgba(37, 35, 31, 0.589);
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  .recharts-wrapper {
+    margin: 0 auto;
+  }
+
+  .recharts-bar-rectangle {
+    transition: all 0.3s ease;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

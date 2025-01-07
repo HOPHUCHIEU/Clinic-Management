@@ -1,0 +1,210 @@
+.patient-record {
+  max-width: 1600px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  position: relative;
+  .list-medical-record {
+    text-align: left;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  .search-bar {
+    outline: none;
+    width: 50%;
+  }
+
+  .record-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      background-color: #007bff;
+      color: #fff;
+
+      th {
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+
+    tbody {
+      td {
+        padding: 20px;
+        border: 1px solid #ddd;
+        text-align: center;
+        vertical-align: top;
+
+        ul {
+          padding-left: 20px;
+          margin: 0;
+          list-style-type: disc;
+
+          li {
+            margin-bottom: 5px;
+            text-align: left;
+          }
+        }
+      }
+
+      .btn-primary {
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 7px;
+        margin-right: 10px;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+
+  /* Modal Overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 700px;
+    max-height: 80vh;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      color: #333333;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .time-line {
+      overflow-y: auto;
+      max-height: calc(100vh - 180px);
+      padding-right: 10px;
+
+      h3 {
+        color: #007bff;
+        font-size: 1.2rem;
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #555555;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 8px 0;
+      }
+
+      .prescription-item {
+        background-color: #f8f9fa;
+        padding: 10px 15px;
+        border-radius: 6px;
+        margin-bottom: 12px;
+        p {
+          margin: 4px 0;
+          font-size: 0.95rem;
+        }
+      }
+    }
+
+    .btn-close {
+      width: 50px;
+      height: 30px;
+      margin-top: 15px;
+      margin-right: 40px;
+      align-self: flex-end;
+      padding: 10px 20px;
+      background-color: #00fcd2;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}
+.pagination_patient {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  justify-content: center;
+  align-items: center;
+
+  .page-item {
+    margin: 0 5px;
+    cursor: pointer;
+
+    &.active {
+      .page-link {
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        border: 1px solid #007bff;
+      }
+    }
+  }
+
+  .page-link {
+    display: inline-block;
+    padding: 8px 12px;
+    color: #007bff;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #f1f1f1;
+      color: #0056b3;
+    }
+  }
+
+  .page-item.previous,
+  .page-item.next {
+    .page-link {
+      font-weight: bold;
+    }
+  }
+
+  .page-item.break {
+    .page-link {
+      border: none;
+      background-color: transparent;
+      cursor: default;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.doctor-sidebar {
+  width: 15%; /* Sidebar occupies 20% of the screen width */
+  background-color: #f0f0f0;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+
+      a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px;
+        display: block;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: #007bff;
+          color: white;
+        }
+
+        /* Active link styling */
+        &.active-link {
+          background-color: #007bff;
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+.blog-details {
+  width: 70%;
+  margin: 0 auto;
+  padding: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+  /* Tiêu đề bài viết */
+  .blog-title {
+    font-size: 2.5rem;  /* Tăng kích thước font */
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 700;
+    line-height: 1.2;
+    border-bottom: 3px solid #007bff;  /* Đổi màu đường viền */
+    padding-bottom: 10px;
+    letter-spacing: 1px;  /* Thêm khoảng cách giữa các chữ cái */
+  }
+
+  /* Thông tin meta: Category, Author, Views, Created At */
+  .blog-meta {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 12px 0;
+    line-height: 1.8;
+    font-style: italic;  /* Thêm kiểu chữ nghiêng */
+    
+    strong {
+      color: #007bff;  /* Thay đổi màu cho các từ khóa */
+      font-weight: 600;
+    }
+
+    & + & {
+      margin-top: 8px;
+    }
+  }
+
+  /* Tóm tắt của blog */
+  .blog-summary {
+    font-size: 1.3rem;
+    color: #444;
+    margin: 20px 0;
+    font-style: italic;
+    text-align: justify;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-left: 5px solid #007bff;  /* Thêm đường viền bên trái */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+
+  /* Nội dung bài viết */
+  .blog-content {
+    margin-top: 30px;
+
+    .content-item {
+      background-color: #f9f9f9;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        transform: translateY(-5px);  /* Tạo hiệu ứng nhấc lên khi hover */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Ảnh trong bài viết */
+      .content-image {
+        width: 100%;  /* Đảm bảo ảnh chiếm toàn bộ chiều rộng của container */
+        height: 500px; /* Chiều cao cố định của ảnh */
+        border-radius: 8px;
+        margin-bottom: 15px;
+        object-fit: cover; /* Đảm bảo ảnh không bị méo và phủ đầy container */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Mô tả ảnh */
+      .image-description {
+        display: block;
+        font-size: 0.9rem;
+        color: #888;
+        margin-top: 8px;
+        text-align: center;
+        font-style: italic;
+      }
+
+      /* Nội dung văn bản trong bài viết */
+      .content-text {
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.8;
+        text-align: justify;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  /* Phần hiển thị khi bài viết đang được tải */
+  .loading {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #888;
+    padding: 20px;
+    font-weight: bold;
+    font-style: italic;
+  }
+}

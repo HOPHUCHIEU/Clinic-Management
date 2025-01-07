@@ -1,0 +1,19 @@
+.certificate-preview {
+  display: flex;
+  gap: 10px; /* Khoảng cách giữa các ảnh */
+  overflow-x: auto; /* Thêm thanh cuộn ngang nếu cần */
+  padding: 10px;
+}
+
+.certificate-item {
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.certificate-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}

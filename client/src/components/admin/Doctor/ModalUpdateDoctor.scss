@@ -1,0 +1,12 @@
+.image-preview img {
+  width: 300px;
+  height: 225px; /* Tỉ lệ 4:3 */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  object-position: top;
+  }
+.modal-dialog{
+  max-width: 1000px;
+}

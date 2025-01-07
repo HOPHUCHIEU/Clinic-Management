@@ -1,0 +1,132 @@
+.product_grid {
+  display: flex;
+  flex-wrap: wrap;  // Cho phép các phần tử con xuống dòng khi không đủ không gian
+  gap: 16px;
+  justify-content: center;  // Căn giữa các sản phẩm
+  padding: 15px;
+  list-style: none; // Loại bỏ ký hiệu danh sách
+}
+
+.product_card {
+  display: flex;
+  flex-direction: column; // Các phần tử bên trong card sẽ được sắp xếp theo chiều dọc
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 180px;  // Đảm bảo chiều rộng của mỗi card vừa phải để nằm trên cùng một hàng
+  text-align: center;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
+  animation: fadeIn 0.6s forwards;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: scaleUp 0.3s forwards;
+    opacity: 1;
+  }
+
+  .product_image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+
+  .product_name, .product_description, .product_price, .product_link {
+    opacity: 1;
+  }
+
+  .product_name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 8px 0;
+    color: #2c3e50;
+    opacity: 0;
+    animation: fadeInText 0.6s 0.2s forwards;
+  }
+
+  .product_description {
+    font-size: 14px;
+    color: #16a085;
+    margin: 8px 0;
+    opacity: 0;
+    animation: fadeInText 0.6s 0.4s forwards;
+  }
+
+  .product_price {
+    font-size: 16px;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInText 0.6s 0.6s forwards;
+  }
+
+  .product_link {
+    padding: 10px 20px;
+    background-color: #3498db;  // Màu xanh dương nhẹ
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;  // Đổi hình dáng nút thành hình tròn hơn
+    font-weight: bold;
+    text-transform: uppercase;  // Chữ in hoa để dễ nhìn
+    font-size: 14px;
+    display: inline-block;
+    transition: all 0.3s ease;  // Thêm hiệu ứng cho tất cả các thuộc tính khi hover
+  
+    &:hover {
+      background-color: #2980b9;  // Xanh dương đậm hơn khi hover
+      transform: scale(1.1);  // Phóng to nút khi hover
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  // Tạo bóng đổ mềm mại
+    }
+  
+    &:active {
+      transform: scale(1);  // Đảm bảo nút không tiếp tục phóng to khi click
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  // Bóng đổ nhẹ khi click
+    }
+  
+    .product_link_text {
+      font-size: 14px;
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+      padding: 5px 0;  // Tạo khoảng cách trong nội dung nút
+    }
+  }
+}
+
+// Các animation cho các phần tử
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: translateY(-5px) scale(1);
+  }
+  100% {
+    transform: translateY(-5px) scale(1.05);
+  }
+}

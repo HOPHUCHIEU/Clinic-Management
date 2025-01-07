@@ -1,0 +1,314 @@
+.doctor-profile {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 66px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  .doctor-header {
+    display: flex;
+    width: 100%;
+    height: 224px;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+
+    .doctor-img {
+      width: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    .doctor-info {
+      .doctor-name {
+        margin-top: 10px;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        .doctor-name__title {
+        }
+      }
+
+      .doctor-details {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        .doctor-title {
+          font-weight: bold;
+          color: #007bff;
+        }
+
+        .doctor-experience {
+          color: #555;
+        }
+      }
+
+      .doctor-specialty a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      .information-doctor {
+        padding-top: 10px;
+      }
+    }
+  }
+
+  .note-container {
+    background-color: #fff7e6; /* Light background color for the note */
+    border-left: 5px solid #ff8c00; /* Orange border */
+    padding: 10px 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+  }
+
+  .note-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .note-icon {
+    font-size: 24px; /* Adjust icon size */
+    color: #ff8c00; /* Orange color for the icon */
+  }
+
+  .note-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff8c00;
+    margin: 0;
+  }
+
+  .note-content {
+    margin: 0;
+    font-weight: 700;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .quick-booking {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0 auto;
+
+    .section-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .date-list {
+      display: flex;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      font-weight: 700;
+      gap: 15px;
+      margin-bottom: 15px;
+
+      .date-item {
+        min-width: 120px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        .time-frame {
+          font-size: 14px;
+          font-weight: 600;
+          color: #27b160;
+        }
+
+        span {
+          display: block;
+          margin-bottom: 5px;
+          font-size: 14px;
+        }
+
+        &:hover {
+          background-color: #e6e6e6;
+        }
+
+        &.active {
+          background-color: #e0f7fa;
+          border: 1px solid #00bcd4;
+        }
+
+        &.booked {
+          color: gray;
+          cursor: not-allowed; // Hiển thị con trỏ không cho phép khi hover
+          opacity: 0.6; // Làm mờ ngày đã đặt
+        }
+        &.selected-date {
+          background-color: #007bff;
+          color: #fff;
+        }
+      }
+    }
+
+    .time-slot-section {
+      margin-top: 15px;
+      max-height: 300px;
+      overflow-y: auto;
+
+      .time-slot-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .time-slot-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .time-slot {
+          border: 1px solid #d3d3d3;
+          font-weight: 400;
+          padding: 10px 15px;
+          border-radius: 8px;
+          background-color: #f9f9f9;
+          cursor: pointer;
+          transition: background-color 0.3s;
+
+          &.selected {
+            background-color: #007bff;
+            color: #fff;
+          }
+
+          &.disabled {
+            cursor: not-allowed; // Không cho phép nhấp
+            opacity: 0.5; // Làm mờ khung giờ đã đặt
+            background-color: #f8d7da; // Màu nền cho slot không có sẵn
+            border-color: #f5c6cb; // Màu biên cho slot không có sẵn
+          }
+        }
+      }
+    }
+  }
+
+  .description {
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 10px;
+      color: #555;
+      line-height: 1.5; // Điều chỉnh khoảng cách dòng
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: 20px;
+      color: #555;
+      line-height: 1.5; // Điều chỉnh khoảng cách dòng
+    }
+  }
+
+  .booking-footer {
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    background-color: #fff;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e0e0e0;
+    margin-top: auto;
+
+    .support-text {
+      width: 30%;
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      flex-direction: column;
+      margin-left: 16px;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .book-now-button {
+      height: 45px;
+      margin-right: 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+  .doctor-info-section {
+    padding: 20px;
+  }
+}
+.login-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 340px;
+  margin-top: 100px;
+  text-align: center;
+
+  .login-message_prompt {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+
+  .login-button_prompt {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+
+    &:active {
+      background-color: #004085;
+    }
+  }
+}

@@ -1,0 +1,270 @@
+.appointment-container {
+  display: flex;
+  max-width: 1000px; /* Đặt chiều rộng tối đa là 700px */
+  width: 100%; /* Để đảm bảo chiếm toàn bộ chiều rộng có sẵn */
+  margin-top: 40px;
+  background-color: #fdfbfb;
+}
+
+.appointment-list {
+  width: 500px;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column; /* Sắp xếp theo cột */
+}
+
+.appointment-list h2 {
+  font-size: 18px;
+}
+
+.search-bar {
+  outline: none;
+  height: 35px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.appointment-content {
+  max-height: 600px; /* Chiều cao tối đa cho danh sách */
+  overflow-y: auto; /* Thêm thanh cuộn dọc */
+  flex-grow: 1; /* Cho phần này chiếm không gian còn lại */
+}
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 10;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ccc;
+  border-top: 6px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Đặt margin bằng 0 để không bị tràn */
+}
+
+.appointment-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+
+  &.active {
+    background-color: #e0f7fa;
+    border-left: 2px solid #007bff;
+  }
+}
+
+.appointment-item h3,
+.appointment-item p,
+.appointment-item h4 {
+  font-size: 16px;
+}
+
+.appointment-item h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.appointment-item:last-child {
+  border-bottom: none;
+}
+
+.stt {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.status {
+  color: rgb(13, 175, 13);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  &.completed {
+    color: #ff0000; // Màu đỏ cho trạng thái đã kết thúc
+  }
+}
+
+.status.cancelled {
+  color: red;
+}
+.delete-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.delete-button:hover {
+  background-color: #ff3333;
+}
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+
+.icon {
+  color: #00bfa6; /* Set the color of the icon (blue/green) */
+  margin-right: 10px;
+}
+
+.appointment-details {
+  flex: 1; /* Để phần này chiếm không gian còn lại */
+  padding: 20px;
+  border-radius: 8px;
+  max-height: 700px; /* Chiều cao tối đa cho chi tiết lịch hẹn */
+  overflow-y: auto; /* Thêm thanh cuộn dọc cho phần thông tin chi tiết */
+}
+
+.appointment-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(13, 175, 13);
+  font-weight: bold;
+
+  .time {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.details-header {
+  margin-top: 30px;
+  display: flex;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.doctor-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.doctor-info-app {
+  margin-left: 20px;
+}
+
+.info-section {
+  margin-bottom: 20px;
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  line-height: 30px;
+}
+
+.label {
+  flex: 1;
+  text-align: left;
+  font-weight: 600;
+}
+
+.value {
+  flex: 1;
+  text-align: right;
+  color: #555; /* Bạn có thể điều chỉnh màu sắc của giá trị */
+}
+
+.appointment-result {
+  margin-top: 20px;
+}
+
+.appointment-result h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result-image {
+  width: 70px;
+  height: 70px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.result-container p {
+  color: #7d7d7d; /* Màu xám nhạt */
+  font-size: 16px;
+}
+
+.countdown-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.countdown {
+  font-size: 16px;
+  color: #333;
+  min-width: 80px;
+  padding: 5px;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  text-align: center;
+  border: none;
+}
+.countdown:hover {
+  background-color: #36b6f1;
+  color: white;
+  cursor: pointer;
+}

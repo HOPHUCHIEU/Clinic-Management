@@ -1,0 +1,90 @@
+.statistics-container {
+    padding: 20px;
+    background-color: #f2f4f8; // Màu nền nhẹ hơn
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .summary {
+      margin-bottom: 30px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 100%;
+      max-width: 1500px;
+  
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #1a1a1a; // Màu chữ tối hơn
+        font-size: 26px; // Kích thước font lớn hơn
+        padding-bottom: 10px;
+      }
+  
+      .ant-statistic {
+        text-align: center;
+        font-size: 22px; // Kích thước font lớn hơn
+        color: #007bff; // Màu chữ cho số liệu
+      }
+    }
+  
+    .daily-chart {
+      margin-bottom: 30px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 100%;
+      max-width: 1500px;
+  
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #1a1a1a;
+        font-size: 26px;
+        padding-bottom: 10px;
+      }
+    }
+  
+    .table,
+    .daily-table,
+    .chart {
+      margin-bottom: 30px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 100%;
+      max-width: 1500px;
+  
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #1a1a1a;
+        font-size: 26px;
+        padding-bottom: 10px;
+      }
+    }
+  
+    .ant-table-thead > tr > th {
+      background-color: #e6f7ff; // Màu nền cho tiêu đề bảng
+      color: #333;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 12px;
+      text-align: center;
+    }
+  
+    .ant-table-tbody > tr > td {
+      padding: 12px;
+      text-align: center;
+      color: #555;
+    }
+  
+    .ant-table-tbody > tr:hover {
+      background-color: #e0f7fa21; // Màu nền khi hover hàng
+    }
+  }
+  

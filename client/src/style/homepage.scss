@@ -1,0 +1,711 @@
+.body-homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 796px;
+  // min-height: 796px;
+
+  border: 1px solid #2976b5;
+  background-color: #1974dc;
+  color: #ffffff;
+  gap: 20px;
+  position: relative;
+
+  .description-search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+
+    .description_1 {
+      font-family: "Roboto", sans-serif;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 58.44px;
+      text-align: center;
+    }
+
+    .description_2 {
+      width: 80%;
+      text-align: center;
+      margin: 10px 0;
+      font-family: "Roboto", sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 33.13px;
+      text-align: center;
+      max-width: 801px;
+      margin-bottom: 20px;
+    }
+
+    /* Container for input and search icon */
+    .search-container {
+      position: relative;
+      width: 809px;
+
+      .search-input {
+        width: 100%;
+        height: 70px;
+        padding: 0 60px 0 26px; /* Padding right for icon */
+        border-radius: 50px;
+        border: none;
+        outline: none;
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 18.75px;
+        background-color: white; /* Optional: Make input background white */
+        color: black;
+      }
+
+      .search-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-70%);
+        font-size: 30px;
+        color: #2976b5;
+        cursor: pointer;
+        right: 25px;
+      }
+    }
+  }
+
+  .img-home-page {
+    width: 800px;
+    height: 615.38px;
+    position: absolute;
+    z-index: 0;
+    right: 60px;
+  }
+}
+.booking_container {
+  height: auto;
+
+  .booking_header {
+    .title {
+      font-family: "Roboto", sans-serif;
+      font-size: 41px;
+      text-transform: uppercase;
+      font-weight: bold;
+      line-height: 49.62px;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .description {
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 19.36px;
+      text-align: center;
+    }
+  }
+  .booking_doctor {
+    .action {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 320px;
+      .booking_title {
+        font-family: "Roboto", sans-serif;
+        font-size: 27px;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 32.68px;
+        margin: 0;
+      }
+      .booking_content {
+        font-family: "Roboto", sans-serif;
+        font-size: 19px;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 19.36px;
+        margin-top: 100px;
+      }
+      .booking_info {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 300;
+        line-height: 21.78px;
+        text-align: center;
+      }
+      .view-more-button {
+        background-color: #2976b5;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        width: 136px;
+        height: 36px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        &:hover {
+          background-color: #1e5a8d;
+        }
+      }
+    }
+    .doctor-cards {
+      display: flex;
+      justify-content: flex-start;
+      align-items: stretch;
+      gap: 20px;
+      padding: 20px;
+      overflow-x: auto;
+      white-space: nowrap;
+      max-width: 1470px;
+      margin: 0 auto;
+
+      &::-webkit-scrollbar {
+        height: 8px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: grey;
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #ccc;
+      }
+    }
+
+    // Individual doctor card
+    .doctor-card {
+      min-width: 330px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+
+      transition: transform 0.3s ease-in-out;
+      display: inline-block;
+      border: 1px solid gray;
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      // Doctor image
+      .doctor-image {
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+        }
+      }
+
+      // Doctor information
+      .doctor-info {
+        h3 {
+          font-size: 18px;
+          color: #333;
+          margin-top: 10px;
+        }
+
+        p {
+          font-size: 14px;
+          color: #666;
+        }
+      }
+
+      // Button action
+      .doctor-action {
+        button {
+          background-color: #007bff;
+          color: white;
+          padding: 10px 20px;
+          margin-top: 15px;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+      }
+    }
+  }
+  .booking_specialty {
+    .action {
+      align-items: center;
+      padding: 0 320px;
+    }
+    .booking_title {
+      font-family: "Roboto", sans-serif;
+      font-size: 27px;
+      font-style: italic;
+      font-weight: 600;
+      line-height: 32.68px;
+      margin-top: 100px;
+    }
+    .booking_content {
+      font-family: "Roboto", sans-serif;
+      font-size: 19px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 19.36px;
+    }
+    .specialty-cards {
+      display: flex;
+      justify-content: flex-start;
+      align-items: stretch;
+      gap: 20px;
+      text-overflow: ellipsis;
+      padding: 20px;
+      overflow-x: auto;
+      white-space: nowrap;
+      max-width: 1470px;
+      margin: 0 auto;
+
+      &::-webkit-scrollbar {
+        height: 8px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: grey;
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #ccc;
+      }
+      &.expanded {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr); // Lưới 8 cột
+        grid-gap: 5px;
+        white-space: normal; // Cho phép các thẻ xuống hàng
+        max-height: none; // Loại bỏ giới hạn chiều cao
+        overflow: hidden; // Loại bỏ thanh cuộn
+      }
+      .specialty-card {
+        background-color: #ffffff;
+        border-radius: 16px; // Bo góc lớn hơn
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); // Bóng mờ tinh tế
+        text-align: center;
+        padding: 20px;
+        min-width: 200px;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        display: inline-block;
+        cursor: pointer; // Thêm hiệu ứng click
+
+        &:hover {
+          transform: translateY(-10px); // Thẻ nhô lên khi hover
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); // Tăng độ mờ
+        }
+
+        .specialty-image {
+          margin-bottom: 15px; // Thêm khoảng cách dưới hình ảnh
+
+          img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover; // Đảm bảo hình ảnh vừa khít trong khung
+            border-radius: 50%; // Hình ảnh tròn
+            background-color: #f0f0f0; // Màu nền xám nhạt nếu ảnh không tải
+          }
+        }
+
+        .specialty-info {
+          h3 {
+            font-size: 16px;
+            color: #2c3e50; // Xanh đậm trung tính
+            font-weight: bold;
+            margin: 0;
+          }
+
+          p {
+            font-size: 14px;
+            color: #7f8c8d; // Xám nhạt
+            margin: 5px 0 0 0;
+          }
+        }
+
+        .specialty-action {
+          margin-top: 10px;
+
+          span {
+            font-size: 16px;
+            color: #34495e; // Xanh đậm
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+              color: #3498db; // Đổi thành xanh sáng hơn khi hover
+            }
+          }
+        }
+      }
+    }
+
+    // Individual doctor card
+
+    .view-more-button {
+      background-color: #2976b5;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      width: 136px;
+      height: 36px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-left: 870px;
+      margin-top: 40px;
+      &:hover {
+        background-color: #1e5a8d;
+      }
+    }
+  }
+
+  .information_doctor {
+    .action {
+      display: flex;
+      justify-content: center;
+      margin-top: 100px;
+    }
+
+    .booking_title {
+      font-family: "Roboto", sans-serif;
+      font-size: 34px;
+      text-transform: uppercase;
+      font-weight: bold;
+      line-height: 41.15px;
+      text-align: center;
+    }
+
+    .information_doctor_container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 77%;
+      margin: 0 auto;
+      border: 7px solid #1974dc66;
+    }
+
+    .doctor_list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 60%;
+      padding: 50px 26px;
+    }
+
+    .doctor_card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      width: calc(50% - 10px);
+      margin-bottom: 20px;
+      .doctor_info {
+        margin-top: 20px;
+        .doctor_name {
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 17.77px;
+          text-align: center;
+        }
+        .specialty {
+          font-family: "Roboto", sans-serif;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 15.23px;
+          text-align: left;
+          color: #000;
+        }
+      }
+    }
+
+    .doctor_card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .doctor_info {
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 17.77px;
+      text-align: left;
+    }
+
+    .doctor_description {
+      max-width: 37%;
+      padding-left: 20px;
+      text-align: center;
+    }
+
+    .doctor_description p {
+      font-family: "Roboto", sans-serif;
+      font-size: 23px;
+      font-weight: 500;
+      line-height: 26.85px;
+      text-align: center;
+      max-width: fit-content;
+    }
+
+    .expert_button {
+      margin-top: 20px;
+      padding: 5px 20px;
+      background-color: #1974dc;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      display: inline-block;
+    }
+
+    .expert_button:hover {
+      background-color: #145aab;
+    }
+  }
+
+  .news_section {
+    text-align: center;
+    margin: 50px auto;
+  }
+
+  .title {
+    font-family: "Roboto", sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 44px;
+  }
+
+  .subtitle {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .search_container {
+    width: 1450px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 240px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+  }
+
+  .filter_buttons button {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .filter_buttons button:hover {
+    background-color: #d9d9d9;
+  }
+
+  .search_bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 50px;
+  }
+
+  .search_bar input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding-left: 35px;
+  }
+
+  .search_icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 12px;
+  }
+
+  .news_cards_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 1470px;
+    margin: 0 auto;
+
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: grey;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #ccc;
+    }
+  }
+
+  .news_card {
+    min-width: 280px;
+    max-width: 280px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .news_card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .news_info {
+    padding: 15px;
+  }
+
+  .news_info h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+
+  .news_info p {
+    font-size: 14px;
+    color: #777;
+  }
+
+  .data-security-section {
+    text-align: center;
+    padding: 50px;
+
+    .title {
+      font-family: "Roboto", sans-serif;
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
+
+    .icons-container {
+      display: flex;
+      justify-content: center;
+      gap: 90px;
+      margin-bottom: 30px;
+
+      .icon-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          margin-bottom: 15px;
+        }
+
+        p {
+          font-size: 16px;
+          text-align: center;
+          line-height: 1.5;
+          a {
+            color: #007bff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .description {
+      font-family: Inter;
+      font-size: 16px;
+      margin-top: 20px;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+  // .chatbot-container {
+  //   position: fixed;
+  //   bottom: 20px;
+  //   right: 20px;
+  //   z-index: 10000;
+  // }
+}
+
+.pagination_homepage {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  justify-content: center;
+  align-items: center;
+
+  .page-item {
+    margin: 0 5px;
+    cursor: pointer;
+
+    &.active {
+      .page-link {
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        border: 1px solid #007bff;
+      }
+    }
+  }
+
+  .page-link {
+    display: inline-block;
+    padding: 8px 12px;
+    color: #007bff;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #f1f1f1;
+      color: #0056b3;
+    }
+  }
+
+  .page-item.previous,
+  .page-item.next {
+    .page-link {
+      font-weight: bold;
+    }
+  }
+
+  .page-item.break {
+    .page-link {
+      border: none;
+      background-color: transparent;
+      cursor: default;
+    }
+  }
+}
